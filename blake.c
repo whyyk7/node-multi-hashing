@@ -20,7 +20,8 @@ void blake_hash(const char* input, char* output, uint32_t len)
 static void hexlify(char *hex, const unsigned char *bin, int len)
 {
 	hex[0] = 0;
-	for(int i=0; i <len; i++)
+	int i;
+	for(i=0; i <len; i++)
 		sprintf(hex+strlen(hex), "%02x", bin[i]);
 }
 
